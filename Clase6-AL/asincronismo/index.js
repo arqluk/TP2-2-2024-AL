@@ -1,7 +1,7 @@
 console.log("Hola, esto es un ejemplo de asincronismo")
 console.log()
 
-async function consultaDePalabrasSinAsync() {
+function consultaDePalabrasSinAsync() {
     const data = fetch ("https://texto.deno.dev/palabras?cantidad=10")
                 .then((res) => console.log("Respuesta dentro del bloque then: ", res))
     console.log("Sin ASYNC: ", data)

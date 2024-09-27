@@ -32,7 +32,7 @@ const products = [
 //Endpoints -> puntos de acceso a nuestro servidor
 app.get("/", (req, res) => {
     //si comentamos el middleware de express que llama a la carpeta public, se puede ver esta respuesta
-    res.send("Ok")
+    res.send("Bienvenido")
 })
 
 
