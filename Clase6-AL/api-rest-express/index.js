@@ -20,7 +20,8 @@ app.use(express.json())
 
 // Opcional añadir el middleware para llamar a la carpeta public o no
 // si está el middleware de public, se pisa la ruta base "localhost:8080/"
-app.use(express.static("public"))
+
+//app.use(express.static("public"))
 
 const products = [
     {nombre: "Celular Xiaomi", categoria: "Smartphones", precio: "989000"},
@@ -28,24 +29,20 @@ const products = [
     {nombre: "Teclado", categoria: "Inalambrico", precio: "80000"}
 ]
 
-
 //Endpoints -> puntos de acceso a nuestro servidor
 app.get("/", (req, res) => {
     //si comentamos el middleware de express que llama a la carpeta public, se puede ver esta respuesta
     res.send("Bienvenido")
 })
 
-
 // app.get("/products", (req, res) => {
 //     console.log("REQ: ", req.method)
 //     res.send("Lista de productos")
 // })
 
-
 app.get("/products", (req, res) => {
     res.send(products)
 })
-
 
 // Invocación del servidor al final
 app.listen(PORT, () => {
