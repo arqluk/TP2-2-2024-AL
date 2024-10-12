@@ -17,7 +17,6 @@ const getAllProducts =  () => {
 //     return await filteredProduct
 // }
 
-
 // Usando el métod find() obtenemos un objeto (producto)
 // const getProductsById =  (identificador) => {
 //     const filteredProduct = products.find( (product) => product.id == identificador )
