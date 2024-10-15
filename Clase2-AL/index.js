@@ -44,13 +44,15 @@ function sumar () {
     console.log('SUMA: ', suma)
 }
 
-//invocar la función
+// Invocación de la función
 sumar()
 
 const z = () => {
     const sumaZ = a + b
     console.log('SUMA: ', sumaZ)
 }
+
+// Invocación de la función
 z()
 
 const z1 = (num1, num2) => {
@@ -60,27 +62,27 @@ const z1 = (num1, num2) => {
     console.log('SUMA Z1: ', num1 + num2)
 }
 
+// Invocación de la función
 z1(45, 55)
 
 // Sumar number + string
-
 z1(45,"55")
 
 
 // ----------------------------------------------------------------------------------------
 
 
-//redeclaración de la variable x, por lo que toma el último valor que es 101
+// Redeclaración de la variable x, por lo que toma el último valor que es 101
 var x = 101
 
 console.log('B es igual a: ', b)
 console.log('Y es igual a: ', y)
 console.log('X es igual a: ', x)
 
-//tipos de datos(dentro de comillas el tipo de dato que queremos comparar)
+// Tipos de datos (dentro de comillas el tipo de dato que queremos comparar)
 console.log( typeof(a) )
 console.log( typeof(b) )
-//acá esta comparando un bloque completo de código, por lo cual da "boolean" como tipo de dato
+// Acá esta comparando un bloque completo de código, por lo cual da "boolean" como tipo de dato
 console.log( typeof(a === "number") )
 
 // IGUALDAD ESTRICTA "===" -> estamos comparando tipo de dato y valor
@@ -95,7 +97,7 @@ if(typeof(a) === "number" && typeof(b) === "number"){
     console.log("No se cumple la condición")
 }
 
-//una vez que la condición se cumple sale del condicional
+// Una vez que la condición se cumple sale del condicional
 if(typeof(a) === "numbr"){
     console.log("A")
 } else if( typeof(b) === "numbe"){
@@ -109,8 +111,8 @@ if(typeof(a) === "numbr"){
 // ----------------------------------------------------------------------------------------
 
 
-//scope -> rango de aplicación/alcance de un valor
-//ej: var x toma el valor que esté dentro de la función
+// scope -> rango de aplicación/alcance de un valor
+// ej: var x toma el valor que esté dentro de la función
 // por más que también esté declarada fuera del bloque
 function restar () {
     var x = 60
@@ -145,28 +147,30 @@ console.log('estudiante: ', estudiante)
 
 // ----------------------------------------------------------------------------------------
 
-//------------------------------//
-//----Programación funcional----//
-//------------------------------//
-//arrow function (función flecha)
+// ------------------------------ //
+// ----Programación funcional---- //
+// ------------------------------ //
+
+// arrow function (función flecha)
 function sumar () {
     const suma = a + b
     console.log('SUMA: ', suma)
 }
 
-//invocar la función
+// Invocarción de la función
 sumar()
 
 const w = () => {
     const sumaW = a + b
     console.log('SUMA: ', sumaW)
 }
+
 w()
 
-//parámetros a una función flecha
+// Parámetros a una función flecha
 const nombre = "Juan Pablo!"
-//template string -> comillas invertidas para poder pasar variables directamente
+// template string -> comillas invertidas para poder pasar variables directamente
 const xyz = (a) => console.log(`Tu nombre es: ${a}`)
-//invocar una función flecha
+// Invocación de una función flecha
 xyz(nombre)
 
