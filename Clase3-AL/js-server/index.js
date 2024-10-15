@@ -10,9 +10,10 @@ console.log(`${saludo} ${nombre}`)
 
 //Diferencia entre módulos de importación:
 //"type": "commonjs" -> como método de exportación configurado en el package.json
- console.log(`TEST: `, saludos.saludar())
- console.log(`TEST: `, saludos.despedir())
+//  console.log(`TEST: `, saludos.saludar())
+//  console.log(`TEST: `, saludos.despedir())
 
-/* //"type": "module" -> como método de exportación configurado en el package.json
+//"type": "module" -> como método de exportación configurado en el package.json
 console.log(`TEST: `, saludos.saludar())
-console.log(`TEST: `, saludos.despedir()) */
+console.log(`TEST: `, saludos.despedir())
+ 

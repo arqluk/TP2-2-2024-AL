@@ -1,8 +1,8 @@
-/* function saludar() {
-    console.log("Bienvenidos a TP2!")
-}
+// function saludar() {
+//     console.log("Bienvenidos a TP2!")
+// }
 
-saludar() */
+// saludar()
 
 
 // ------------------------------------------------------------------
@@ -11,17 +11,17 @@ saludar() */
 const a = "0"
 const b = 0
 
-/* // IGUALDAD: comparacion del valor
-console.log(a == b)
-// IGUALDAD ESTRICTA: comparacion de valor y tipo de dato
-console.log(a === b) */
+// // IGUALDAD: comparacion del valor
+// console.log(a == b)
+// // IGUALDAD ESTRICTA: comparacion de valor y tipo de dato
+// console.log(a === b)
 
 
 // ------------------------------------------------------------------
 
 
-//Objetos
-//clave(propiedades)-valor
+// Objetos
+// clave(propiedades)-valor
 const estudiante = {
     nombre: "Juan Pablo",
     nota: 10,
@@ -32,21 +32,23 @@ const estudiante = {
 //  console.log('Estudiante: ', estudiante)
 
 //  Agregar propiedades
-  console.log("Propiedades estudiante antes: ", estudiante)
+   console.log("Propiedades estudiante antes: ", estudiante)
 
-  function asignarTurno() {
-    estudiante.turno = "Noche"
-     console.log("Propiedades estudiante después: ", estudiante)
- }
- asignarTurno()
+//   function asignarTurno() {
+//     estudiante.turno = "Noche"
+//      console.log("Propiedades estudiante después: ", estudiante)
+//  }
+
+//  asignarTurno()
 
 
-/*   setTimeout(() => {
+   setTimeout(() => {
     console.log('setTimeout: ')
     estudiante.turno = "Noche"
     console.log("Propiedades estudiante después: ", estudiante)
-}, 3000); */
-// console.log("Propiedades estudiante después: ", estudiante)
+}, 3000);
+
+ console.log("Propiedades estudiante después: ", estudiante)
 
 //  Agregar propiedades
 /*   estudiante.turno = "Noche"
@@ -70,7 +72,7 @@ const estudiante = {
 //  Ctrl +  Alt + }
 //  ``
 
-// console.log(`Hola ${estudiante.nombre}! Tu nota es: ${estudiante.nota}`)
+ console.log(`Hola ${estudiante.nombre}! Tu nota es: ${estudiante.nota}`)
 
 
  // ------------------------------------------------------------------
@@ -94,4 +96,19 @@ const estudiante = {
     estudiante.turno = "Noche"
     console.log("Propiedades estudiante después: ", estudiante)
 }, 3000); */
+
+// ------------------------------------------------------------------
+
+// Hoisting
+
+console.log(miVariable)
+var miVariable = 5
+console.log(miVariable)
+
+
+miFuncion()
+
+function miFuncion() {
+  console.log("Esta es mi función")
+}
   

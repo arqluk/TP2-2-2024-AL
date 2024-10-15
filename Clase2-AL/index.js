@@ -119,7 +119,7 @@ function restar () {
     let y = 40
     const b = 50
  //   y = 50
- //   b = 60
+ //  b = 60
     const resta = x - y
     const resta1 = x - b
     console.log('X: ', x)
