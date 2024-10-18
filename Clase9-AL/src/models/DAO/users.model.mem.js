@@ -12,12 +12,21 @@ class UserMemModel {
 
 
     //Métodos de la clase
+    // Sintaxis de arrow function
     getAllUsers = async () => {
         return await this.users
     }
+
+    // Sintaxis de function 
+    // getAllUsers = function() {
+    //     async () => {
+    //         return await this.users
+    // }
 }
 
 export default UserMemModel
+
+
 
 
 
