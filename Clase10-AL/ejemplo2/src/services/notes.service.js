@@ -5,6 +5,11 @@ class NotesService {
         this.model = Factory.get("")
     }
 
+    getNotes = async () => {
+        const msg = await this.model.getNotes()
+        return msg
+    }
+
     postNotes = async (note) => {
         const newNote = await this.model.postNotes(note)
         return newNote
@@ -26,7 +31,7 @@ class NotesService {
     }
 
     getNotesMax = async () => {
-        const noteMax = await this.model.getNotesMin()
+        const noteMax = await this.model.getNotesMax()
         return noteMax
     }
 }

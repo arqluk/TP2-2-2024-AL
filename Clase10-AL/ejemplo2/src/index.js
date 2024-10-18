@@ -13,13 +13,5 @@ app.use(express.json())
 
 app.use("/", new NotesRoutes().start())
 
-// const server = app.listen(PORT, () => {
-//     (console.log(`Server running on: http://localhost:${PORT}`))
-// })
-
-// server.on("error", (err) => {
-//     console.log("Ha ocurrido un error en el servidor:", err)
-// })
-
 app.listen( PORT, () => console.log(`Server running on: http://localhost:${PORT}`) )
 app.on( "Error", (err) => { console.log("Ha ocurrido un error en el servidor: ", err) } )

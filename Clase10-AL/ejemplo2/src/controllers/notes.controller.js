@@ -5,6 +5,11 @@ class NotesController {
         this.service = new NotesService()
     }
 
+    getNotes = async (req, res) => {
+        const msg = await this.service.getNotes()
+        res.send(msg)
+    }
+    
     postNotes = async (req, res) => {
         const note = req.body
         const newNote = await this.service.postNotes(note)
@@ -17,18 +22,18 @@ class NotesController {
     }
 
     getNotesMed = async (req, res) => {
-        const noteMed = await this.service.getNotesMed()
-        res.send(noteMed)
+        const promedioNotas = await this.service.getNotesMed()
+        res.send(promedioNotas)
     }
 
     getNotesMin = async (req, res) => {
-        const noteMin = await this.service.getNotesMin()
-        res.send(noteMin)
+        const minNota = await this.service.getNotesMin()
+        res.send(minNota)
     }
 
     getNotesMax = async (req, res) => {
-        const noteMax = await this.service.getNotesMin()
-        res.send(noteMax)
+        const maxNota = await this.service.getNotesMax()
+        res.send(maxNota)
     }
 }
 

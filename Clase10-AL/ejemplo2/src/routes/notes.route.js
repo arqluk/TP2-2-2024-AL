@@ -8,9 +8,10 @@ class NotesRoutes {
     }
 
     start() {
+        this.router.get("/", this.controller.getNotes)
         this.router.post("/notes", this.controller.postNotes)
         this.router.get("/notes", this.controller.getAllNotes)
-        this.router.get("/notes/avg", this.controller.getNotesMed)
+        this.router.get("/notes/med", this.controller.getNotesMed)
         this.router.get("/notes/min", this.controller.getNotesMin)
         this.router.get("/notes/max", this.controller.getNotesMax)
         return this.router
