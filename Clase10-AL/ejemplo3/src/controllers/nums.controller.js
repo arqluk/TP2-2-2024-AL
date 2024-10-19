@@ -12,7 +12,7 @@ class NumsController {
 
     postNums = async (req, res) => {
         const num = req.body
-        const newNum = await this.service.postNums()
+        const newNum = await this.service.postNums(num)
         res.send(newNum)
     }
 
