@@ -2,7 +2,7 @@ import Factory from "../models/Factory.js"
 
 class NumsService {
     constructor() {
-        this.model = Factory.get("FS")
+        this.model = Factory.get("MEM")
     }
 
     numsWelcome = async () => {
@@ -34,6 +34,25 @@ class NumsService {
         const cantNums = await this.model.getNumsCant()
         return cantNums
     }
+
+    // Fuera de consigna ...
+    getNumsById = async (identificador) => {
+        const numById = await this.model.getNumsById(identificador)
+        return  numById
+    }
+
+    putNums = async (identificador, num) => {
+        return this.model.putNums(identificador, num)
+    }
+
+    patchNums = async (identificador, num) => {
+        return this.model.patchNums(identificador, num)
+    }
+
+    deleteNums = async (identificador) => {
+        return this.model.deleteNums(identificador)
+    }
+
 }
 
 export default NumsService

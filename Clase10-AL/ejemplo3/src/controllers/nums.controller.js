@@ -36,6 +36,34 @@ class NumsController {
         res.send(cantNums)
     }
 
+    // Fuera de consigna ...
+    getNumsById = async (req, res) => {
+        const { identificador } = req.params
+        const numById = await this.service.getNumsById(identificador)
+        res.send(numById)
+    }
+
+    putNums = async (req, res) => {
+        const { id } = req.params
+        const num = req.body
+        const putNum = await this.service.putNums(id, num)
+        res.send(putNum)
+    }
+
+    patchNums = async (req, res) => {
+        const { id } = req.params
+        const num = req.body
+        const patchNum = await this.service.patchNums(id, num)
+        res.send(patchNum)
+    }
+      
+    deleteNums = async (req, res) => {
+        // req.params tiene muchos parámetros  sólo necesito el id (desestructuring)
+        const { id } = req.params
+        const deleteNum = await this.service.deleteNums(id)
+        res.send(deleteNum)
+    }
+
 }
 
 export default NumsController

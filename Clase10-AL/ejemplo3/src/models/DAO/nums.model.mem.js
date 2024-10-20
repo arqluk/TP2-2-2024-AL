@@ -37,13 +37,37 @@ class NumsMemModel {
     //    const { promedioNums } = this.calcularNums(this.nums)
         return `El cantidad de números ingresados es: ${this.nums.length}`
     }
+
+    // Fuera de consigna ...
+    getNumsById =  async (identificador) => {
+        const numById =  this.nums.filter( (num) => num.id == identificador )
+        return numById
+    }
+
+    putNums = async (identificador, num) => {
+        //Lo que viene por parámetros siempre es un string!!!
+        num.id = parseInt(identificador)
+        //La comparación es solo de valor, no considera el tipo de dato!!!
+        const index = this.nums.findIndex((n) => n.id == identificador)
+        this.nums.splice(index, 1, num)
+        return "Actualización exitosa."
+    }
+
+    patchNums = async (identificador, num) => {
+        const index = this.nums.findIndex((n) => n.id == identificador)
+    //Spread operator "..."
+    const newNum = {...this.nums[index], ...num}
+        this.nums.splice(index, 1, newNum)
+        return "Actualización exitosa."
+    }
+
+    deleteNums = async (identificador) => {
+        const index = this.nums.findIndex((num) => num.id == identificador)
+        if(index == -1) throw new Error("El id del elemento no existe.")
+            this.nums.splice(index, 1)
+        return "El número fue borrado"
+    }
  
-
-
-
-
-
-
     // Función que calcula la nota más baja, la más alta y el promedio
     calcularNums = (nums) => {
         let minNum = Infinity

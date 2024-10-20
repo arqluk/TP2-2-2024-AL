@@ -52,6 +52,47 @@ class NumsFsModel {
         return `El cantidad de números ingresados es: ${numsJs.length}`
     }
 
+    // Fuera de consigna ...
+    getNumsById =  async (identificador) => {
+        let numsJs = await fs.promises.readFile(this.nums, "utf-8")
+        numsJs = JSON.parse(numsJs)
+        const numById =  numsJs.filter( (num) => num.id == identificador )
+        return numById
+    }
+
+    putNums = async (identificador, num) => {
+        //Lo que viene por parámetros siempre es un string!!!
+        let numsJs = await fs.promises.readFile(this.nums, "utf-8")
+        numsJs = JSON.parse(numsJs)
+        num.id = parseInt(identificador)
+        //La comparación es solo de valor, no considera el tipo de dato!!!
+        const index = numsJs.findIndex((n) => n.id == identificador)
+        numsJs.splice(index, 1, num)
+        await fs.promises.writeFile(this.nums, JSON.stringify(numsJs, null, 2))
+        return "Actualización exitosa."
+    }
+
+    patchNums = async (identificador, num) => {
+        let numsJs = await fs.promises.readFile(this.nums, "utf-8")
+        numsJs = JSON.parse(numsJs)
+        const index = numsJs.findIndex((n) => n.id == identificador)
+    //Spread operator "..."
+    const newNum = {...numsJs[index], ...num}
+    numsJs.splice(index, 1, newNum)
+        await fs.promises.writeFile(this.nums, JSON.stringify(numsJs, null, 2))
+        return "Actualización exitosa."
+    }
+
+    deleteNums = async (identificador) => {
+        let numsJs = await fs.promises.readFile(this.nums, "utf-8")
+        numsJs = JSON.parse(numsJs)
+        const index = numsJs.findIndex((num) => num.id == identificador)
+        if(index == -1) throw new Error("El id del elemento no existe.")
+            numsJs.splice(index, 1)
+        await fs.promises.writeFile(this.nums, JSON.stringify(numsJs, null, 2))
+        return "El número fue borrado"
+    }
+
     // Función que calcula la nota más baja, la más alta y el promedio
     calcularNums = (nums) => {
         let minNum = Infinity
