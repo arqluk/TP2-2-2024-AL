@@ -1,6 +1,7 @@
 {
-  "name": "ejemplo3",
+  "name": "ejemplo2",
   "version": "1.0.0",
+  "description": "",
   "main": "src/index.js",
   "type": "module",
   "scripts": {

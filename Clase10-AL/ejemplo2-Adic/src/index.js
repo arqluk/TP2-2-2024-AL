@@ -1,5 +1,5 @@
 import express from "express"
-import NumsRoutes from "./routes/nums.route.js"
+import NotesRoutes from "./routes/notes.route.js"
 
 const app = express()
 const PORT = process.env.PORT || 8080
@@ -11,8 +11,7 @@ app.use(express.json())
 //     res.send("Servidor funcionando ok")
 // })
 
-app.use("/", new NumsRoutes().start())
+app.use("/", new NotesRoutes().start())
 
 app.listen( PORT, () => console.log(`Server running on: http://localhost:${PORT}`) )
 app.on( "Error", (err) => { console.log("Ha ocurrido un error en el servidor: ", err) } )
-

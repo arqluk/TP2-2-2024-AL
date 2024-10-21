@@ -2,7 +2,7 @@ import Factory from "../models/Factory.js"
 
 class NumsService {
     constructor() {
-        this.model = Factory.get("MEM")
+        this.model = Factory.get("")
     }
 
     numsWelcome = async () => {
