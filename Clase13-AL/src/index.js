@@ -2,7 +2,6 @@ import express from "express"
 import ProdRoutes from "./routes/ProductsRoutes.js"
 import UsersRoutes from "./routes/UsersRoutes.js"
 import MongoConnection from "./models/MongoConnection.js"
-import generator from "./utils/generator.js"
 
 const app = express()
 const PORT = 8080
